@@ -51,8 +51,20 @@ createApp({
             ],
 
         }
+
     },
+
+    created() {
+        // Avvia l'autoplay
+        this.autoPlay();
+    },
+
     methods: {
+
+        autoPlay() {
+            setInterval(this.nextSlide, 2000);
+        },
+
         nextSlide() {
             this.activeSlideIndex++;
 
@@ -77,3 +89,4 @@ createApp({
         },
     }
 }).mount('#app');
+
