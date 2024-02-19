@@ -19,9 +19,9 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item" v-for="(currentSlide, index) in slides">
+                <div class="item" v-for="(currentSlide, index) in slides" v-show="index == activeSlideIndex">
                     <img :src="currentSlide.image" :alt="'Immagine ' + (index + 1)" />
-                    :alt="'Immagine' + (index + 1)" />
+
                     <div class="text">
                         <h3>{{currentSlide.title}}</h3>
                         <p>
