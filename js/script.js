@@ -50,19 +50,26 @@ createApp({
                 }
             ],
 
+            //inizializzo la variabile autoplay a null
+            autoPlay: null
+
         }
 
     },
 
     created() {
-        // Avvia l'autoplay
-        this.autoPlay();
+        // avvio l'autoplay al lancio del programma
+        this.startAutoPlay();
     },
 
     methods: {
 
-        autoPlay() {
-            setInterval(this.nextSlide, 2000);
+        startAutoPlay() {
+            this.autoPlay = setInterval(this.nextSlide, 3000);
+        },
+
+        stopAutoPlay() {
+            clearInterval(this.autoPlay);
         },
 
         nextSlide() {

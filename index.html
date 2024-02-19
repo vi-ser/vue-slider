@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="thumbs">
+                <div @mouseover="stopAutoPlay()" @mouseleave="startAutoPlay()" class="thumbs">
                     <div @click="prevSlide()" class="prev"></div>
                     <div @click="nextSlide()" class="next"></div>
                     <div v-for="(currentSlide, index) in slides" class="thumb"
