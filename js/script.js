@@ -57,7 +57,7 @@ createApp({
             this.activeSlideIndex++;
 
             // controllo che l'indice non vada oltre l'ultima immagine
-            if (this.activeSlideIndex >= this.movie.images.length) {
+            if (this.activeSlideIndex >= this.slides.length) {
                 this.activeSlideIndex = 0
             }
         },
@@ -67,7 +67,7 @@ createApp({
 
             // qui controllo che l'indice non vada oltre lo zero 
             if (this.activeSlideIndex < 0) {
-                this.activeSlideIndex = this.movie.images.length - 1;
+                this.activeSlideIndex = this.slides.length - 1;
             }
         },
 
